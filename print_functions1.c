@@ -15,7 +15,7 @@ int _print_unsigned(va_list types, char buffer[], int flags, int width, int prec
 	int q = BUFF_SIZE - 2;
 	unsigned long int num = va_arg(types, unsigned long int);
 
-	num = convert_size_unsgnd(num, size);
+	num = _convert_size_unsgnd(num, size);
 
 	if (num == 0)
 		buffer[q--] = '0';
@@ -30,7 +30,7 @@ int _print_unsigned(va_list types, char buffer[], int flags, int width, int prec
 
 	q++;
 
-	return (write_unsgnd(0, q, buffer, flags, width, precision, size));
+	return (_write_unsgnd(0, q, buffer, flags, width, precision, size));
 }
 
 
@@ -52,7 +52,7 @@ int _print_octal(va_list types, char buffer[], int flags, int width, int precisi
 
 	UNUSED(width);
 
-	num = convert_size_unsgnd(num, size);
+	num = _convert_size_unsgnd(num, size);
 
 	if (num == 0)
 		buffer[q--] = '0';
@@ -66,7 +66,7 @@ int _print_octal(va_list types, char buffer[], int flags, int width, int precisi
 	if (flags & F_HASH && init_num != 0)
 		buffer[q--] = '0';
 	q++;
-	return (write_unsgnd(0, q, buffer, flags, width, precision, size));
+	return (_write_unsgnd(0, q, buffer, flags, width, precision, size));
 }
 
 
@@ -82,7 +82,7 @@ int _print_octal(va_list types, char buffer[], int flags, int width, int precisi
  */
 int _print_hexadecimal(va_list types, char buffer[], int flags, int width, int precision, int size)
 {
-	return (print_hexa(types, "0123456789abcdef", buffer,
+	return (_print_hexa(types, "0123456789abcdef", buffer,
 		flags, 'x', width, precision, size));
 }
 
@@ -99,7 +99,7 @@ int _print_hexadecimal(va_list types, char buffer[], int flags, int width, int p
  */
 int _print_hexa_upper(va_list types, char buffer[], int flags, int width, int precision, int size)
 {
-	return (print_hexa(types, "0123456789ABCDEF", buffer,
+	return (_print_hexa(types, "0123456789ABCDEF", buffer,
 		flags, 'X', width, precision, size));
 }
 
@@ -125,7 +125,7 @@ int _print_hexa(va_list types, char map_to[], char buffer[], int flags, char fla
 
 	UNUSED(width);
 
-	num = convert_size_unsgnd(num, size);
+	num = _convert_size_unsgnd(num, size);
 
 	if (num == 0)
 		buffer[q--] = '0';
@@ -141,5 +141,5 @@ int _print_hexa(va_list types, char map_to[], char buffer[], int flags, char fla
 		buffer[q--] = '0';
 	}
 	q++;
-	return (write_unsgnd(0, q, buffer, flags, width, precision, size));
+	return (_write_unsgnd(0, q, buffer, flags, width, precision, size));
 }
