@@ -10,7 +10,7 @@
  * @size: parameter
  * Return:(0)Always
  */
-int handle_write_char(char c, char buffer[], int flags, int width, int precision, int size)
+int _handle_write_char(char c, char buffer[], int flags, int width, int precision, int size)
 {
 	int q = 0;
 	char paddy = ' ';
@@ -50,7 +50,7 @@ int handle_write_char(char c, char buffer[], int flags, int width, int precision
  * @size: paramter
  * Return:(0)Always
  */
-int write_number(int is_negative, int ind, char buffer[], int flags, int width, int precision, int size)
+int _write_number(int is_negative, int ind, char buffer[], int flags, int width, int precision, int size)
 {
 	int leng = BUFF_SIZE - ind - 1;
 	char paddy = ' ', extra_ch = 0;
