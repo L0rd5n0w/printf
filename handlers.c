@@ -66,7 +66,7 @@ int _write_number(int is_negative, int ind, char buffer[], int flags, int width,
 	else if (flags & F_SPACE)
 		extra_ch = ' ';
 	return (write_num(ind, buffer, flags, width, precision,
-		leng, padd, extra_ch));
+		leng, paddy, extra_ch));
 }
 
 /**
