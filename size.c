@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_size -function
+ * _get_size -function
  * @format: parameter
  * @i: parameter
  * Return:(0)Always

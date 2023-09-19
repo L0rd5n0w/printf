@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_pointer -function
+ * _print_pointer -function
  * @types: parameter
  * @buffer: parameter
  * @flags: parameter
@@ -53,7 +53,7 @@ int _print_pointer(va_list types, char buffer[], int flags, int width, int preci
 }
 
 /**
- * print_non_printable -function
+ * _print_non_printable -function
  * @types: parameter
  * @buffer: parameter
  * @flags: parameter
@@ -93,7 +93,7 @@ int _print_non_printable(va_list types, char buffer[], int flags, int width, int
 
 
 /**
- * print_reverse -function
+ * _print_reverse -function
  * @types: parameter
  * @buffer: parameter
  * @flags: parameter
@@ -136,7 +136,7 @@ int _print_reverse(va_list types, char buffer[], int flags, int width, int preci
 }
 
 /**
- * print_rot13string -funtion
+ * _print_rot13string -funtion
  * @types: parameter
  * @buffer: parameter
  * @flags: parameter

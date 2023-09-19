@@ -2,7 +2,7 @@
 
 
 /**
- * print_char -function
+ * _print_char -function
  * @types: parameter
  * @buffer: parameter
  * @flags: parameter
@@ -19,7 +19,7 @@ int _print_char(va_list types, char buffer[], int flags, int width, int precisio
 }
 
 /**
- * print_string -function
+ * _print_string -function
  * @types: parameter
  * @buffer: parameter
  * @flags:  parameter
@@ -74,7 +74,7 @@ int _print_string(va_list types, char buffer[], int flags, int width, int precis
 }
 
 /**
- * print_percent -function
+ * _print_percent -function
  * @types: parameter
  * @buffer: parameter
  * @flags: parameter
@@ -96,7 +96,7 @@ int _print_percent(va_list types, char buffer[], int flags, int width, int preci
 
 
 /**
- * print_int -function
+ * _print_int -function
  * @types: parameter
  * @buffer: parameter
  * @flags: parameter
@@ -139,7 +139,7 @@ int _print_int(va_list types, char buffer[], int flags, int width, int precision
 
 
 /**
- * print_binary -function
+ * _print_binary -function
  * @types: parameter
  * @buffer: parameter
  * @flags:  parameter

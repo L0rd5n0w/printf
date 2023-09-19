@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * handle_print -function
+ * _handle_print -function
  * @fmt: parameter
  * @list: parameter
  * @ind: parameter

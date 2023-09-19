@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * is_printable -function
+ * _is_printable -function
  * @c: parameter
  * Return:(0)Always
  */
@@ -14,7 +14,7 @@ int _is_printable(char c)
 }
 
 /**
- * append_hexa_code -function
+ * _append_hexa_code -function
  * @buffer: parameter
  * @i: parameter
  * @ascii_code: parameter
@@ -38,7 +38,7 @@ int _append_hexa_code(char ascii_code, char buffer[], int i)
 }
 
 /**
- * is_digit -function
+ * _is_digit -function
  * @c: parameter
  * Return:(0)Always
  */
@@ -51,7 +51,7 @@ int _is_digit(char c)
 }
 
 /**
- * convert_size_number -function
+ * _convert_size_number -function
  * @num: parameter
  * @size: parameter
  * Return:(0)Always
@@ -67,7 +67,7 @@ long int _convert_size_number(long int num, int size)
 }
 
 /**
- * convert_size_unsgnd -function
+ * _convert_size_unsgnd -function
  * @num: parameter
  * @size: parameter
  * Return:(0)Always

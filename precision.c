@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_precision -function
+ * _get_precision -function
  * @format: parameter
  * @i: parameter
  * @list: parameter

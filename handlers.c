@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * handle_write_char -function
+ * _handle_write_char -function
  * @c: parameter
  * @buffer: parameter
  * @flags:  paramete
@@ -43,7 +43,7 @@ int handle_write_char(char c, char buffer[], int flags, int width, int precision
 
 
 /**
- * write_number -function
+ * _write_number -function
  * @is_negative: parameter
  * @ind: parameter
  * @buffer: parameter
@@ -75,7 +75,7 @@ int write_number(int is_negative, int ind, char buffer[], int flags, int width, 
 }
 
 /**
- * write_num -function
+ * _write_num -function
  * @ind: parameter
  * @buffer: parameter
  * @flags: parameter
@@ -132,7 +132,7 @@ int _write_num(int ind, char buffer[], int flags, int width, int prec, int lengt
 }
 
 /**
- * write_unsgnd - function
+ * _write_unsgnd - function
  * @is_negative: parameter
  * @ind: parameter
  * @buffer: parameter
@@ -188,7 +188,7 @@ int _write_unsgnd(int is_negative, int ind, char buffer[], int flags, int width,
 }
 
 /**
- * write_pointer -function
+ * _write_pointer -function
  * @buffer: parameter
  * @ind: parameter
  * @length: parameter

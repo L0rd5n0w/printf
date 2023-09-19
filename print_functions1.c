@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_unsigned -function
+ * _print_unsigned -function
  * @types: parameter
  * @buffer: parameter
  * @flags:  parameter
@@ -36,7 +36,7 @@ int _print_unsigned(va_list types, char buffer[],
 
 
 /**
- * print_octal -function
+ * _print_octal -function
  * @types: parameter
  * @buffer: parameter
  * @flags:  parameter
@@ -77,7 +77,7 @@ int _print_octal(va_list types, char buffer[], int flags, int width, int precisi
 
 
 /**
- * print_hexadecimal -function
+ * _print_hexadecimal -function
  * @types: parameter
  * @buffer: parameter
  * @flags:  parameter
@@ -94,7 +94,7 @@ int _print_hexadecimal(va_list types, char buffer[], int flags, int width, int p
 
 
 /**
- * print_hexa_upper -function
+ * _print_hexa_upper -function
  * @types: parameter
  * @buffer: parameter
  * @flags:  parameter
@@ -111,7 +111,7 @@ int _print_hexa_upper(va_list types, char buffer[], int flags, int width, int pr
 
 
 /**
- * print_hexa -function
+ * _print_hexa -function
  * @types: parameter
  * @map_to: parameter
  * @buffer: parameter

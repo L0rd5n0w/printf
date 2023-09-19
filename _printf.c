@@ -58,7 +58,7 @@ int _printf(const char *format, ...)
 }
 
 /**
- * print_buffer -function
+ * _print_buffer -function
  * @buffer: parameter
  * @buff_ind: parameter
  */

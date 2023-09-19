@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_width -funtion
+ * _get_width -funtion
  * @format: parameter
  * @i: parameter
  * @list: parameeter
