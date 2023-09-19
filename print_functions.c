@@ -15,7 +15,7 @@ int _print_char(va_list types, char buffer[], int flags, int width, int precisio
 {
 	char c = va_arg(types, int);
 
-	return (handle_write_char(c, buffer, flags, width, precision, size));
+	return (_handle_write_char(c, buffer, flags, width, precision, size));
 }
 
 /**
@@ -70,7 +70,7 @@ int _print_string(va_list types, char buffer[], int flags, int width, int precis
 		}
 	}
 
-	return (write(1, str, length));
+	return (_write(1, str, length));
 }
 
 /**
@@ -91,7 +91,7 @@ int _print_percent(va_list types, char buffer[], int flags, int width, int preci
 	UNUSED(width);
 	UNUSED(precision);
 	UNUSED(size);
-	return (write(1, "%%", 1));
+	return (_write(1, "%%", 1));
 }
 
 
@@ -112,7 +112,7 @@ int _print_int(va_list types, char buffer[], int flags, int width, int precision
 	long int n = va_arg(types, long int);
 	unsigned long int num;
 
-	n = convert_size_number(n, size);
+	n = _convert_size_number(n, size);
 
 	if (n == 0)
 		buffer[q--] = '0';
@@ -134,7 +134,7 @@ int _print_int(va_list types, char buffer[], int flags, int width, int precision
 
 	q++;
 
-	return (write_number(is_negative, q, buffer, flags, width, precision, size));
+	return (_write_number(is_negative, q, buffer, flags, width, precision, size));
 }
 
 
