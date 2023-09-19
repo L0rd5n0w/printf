@@ -20,10 +20,8 @@ int handle_write_char(char c, char buffer[], int flags, int width, int precision
 
 	if (flags & F_ZERO)
 		paddy = '0';
-
 	buffer[q++] = c;
 	buffer[q] = '\0';
-
 	if (width > 1)
 	{
 		buffer[BUFF_SIZE - 1] = '\0';
@@ -37,7 +35,6 @@ int handle_write_char(char c, char buffer[], int flags, int width, int precision
 			return (write(1, &buffer[BUFF_SIZE - q - 1], width - 1) +
 					write(1, &buffer[0], 1));
 	}
-
 	return (write(1, &buffer[0], 1));
 }
 
@@ -56,8 +53,7 @@ int handle_write_char(char c, char buffer[], int flags, int width, int precision
 int write_number(int is_negative, int ind, char buffer[], int flags, int width, int precision, int size)
 {
 	int leng = BUFF_SIZE - ind - 1;
-	char paddy = ' ';
-	char extra_ch = 0;
+	char paddy = ' ', extra_ch = 0;
 
 	UNUSED(size);
 
@@ -69,7 +65,6 @@ int write_number(int is_negative, int ind, char buffer[], int flags, int width, 
 		extra_ch = '+';
 	else if (flags & F_SPACE)
 		extra_ch = ' ';
-
 	return (write_num(ind, buffer, flags, width, precision,
 		leng, padd, extra_ch));
 }
@@ -88,8 +83,7 @@ int write_number(int is_negative, int ind, char buffer[], int flags, int width, 
  */
 int _write_num(int ind, char buffer[], int flags, int width, int prec, int length, char padd, char extra_c)
 {
-	int q;
-	int paddstart = 1;
+	int q,  paddstart = 1;
 
 	if (prec == 0 && ind == BUFF_SIZE - 2 && buffer[ind] == '0' && width == 0)
 		return (0);
@@ -145,8 +139,7 @@ int _write_num(int ind, char buffer[], int flags, int width, int prec, int lengt
 int _write_unsgnd(int is_negative, int ind, char buffer[], int flags, int width, int precision, int size)
 {
 
-	int length = BUFF_SIZE - ind - 1,
-	int q = 0;
+	int length = BUFF_SIZE - ind - 1, q = 0;
 	char paddy = ' ';
 
 	UNUSED(is_negative);
