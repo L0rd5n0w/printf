@@ -81,12 +81,12 @@ int write_number(int is_negative, int ind, char buffer[], int flags, int width, 
  * @flags: parameter
  * @width: parameter
  * @prec: parameter
- * @lengh: parameter
+ * @length: parameter
  * @padd: parameter
  * @extra_c: parameter
  * Return:(0)Always
  */
-int write_num(int ind, char buffer[], int flags, int width, int prec, int length, char padd, char extra_c)
+int _write_num(int ind, char buffer[], int flags, int width, int prec, int length, char padd, char extra_c)
 {
 	int q;
 	int paddstart = 1;
@@ -142,7 +142,7 @@ int write_num(int ind, char buffer[], int flags, int width, int prec, int length
  * @size: parameter
  * Return:(0)Always
  */
-int write_unsgnd(int is_negative, int ind, char buffer[], int flags, int width, int precision, int size)
+int _write_unsgnd(int is_negative, int ind, char buffer[], int flags, int width, int precision, int size)
 {
 
 	int length = BUFF_SIZE - ind - 1,
@@ -199,7 +199,7 @@ int write_unsgnd(int is_negative, int ind, char buffer[], int flags, int width, 
  * @padd_start: parameter
  * Return:(0)Always
  */
-int write_pointer(char buffer[], int ind, int length, int width, int flags, char padd, char extra_c, int padd_start)
+int _write_pointer(char buffer[], int ind, int length, int width, int flags, char padd, char extra_c, int padd_start)
 {
 	int q;
 

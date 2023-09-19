@@ -7,7 +7,7 @@
  * @list: parameeter
  * Return:(0)Always
  */
-int get_width(const char *format, int *i, va_list list)
+int _get_width(const char *format, int *i, va_list list)
 {
 	int curry;
 	int width = 0;

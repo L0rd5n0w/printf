@@ -6,7 +6,7 @@
  * @i: parameter
  * Return:(0)Always
  */
-int get_flags(const char *format, int *i)
+int _get_flags(const char *format, int *i)
 {
 	/* - + 0 # ' ' */
 	/* 1 2 4 8  16 */

@@ -4,9 +4,9 @@
  * get_size -function
  * @format: parameter
  * @i: parameter
- * Return:(0)Always 
+ * Return:(0)Always
  */
-int get_size(const char *format, int *i)
+int _get_size(const char *format, int *i)
 {
 	int curry = *i + 1;
 	int size = 0;

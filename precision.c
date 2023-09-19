@@ -7,7 +7,7 @@
  * @list: parameter
  * Return:(0)Always
  */
-int get_precision(const char *format, int *i, va_list list)
+int _get_precision(const char *format, int *i, va_list list)
 {
 	int curry = *i + 1;
 	int precision = -1;

@@ -11,7 +11,7 @@
  * @size: parameter
  * Return:(0)Always
  */
-int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
+int _handle_print(const char *fmt, int *ind, va_list list, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	int q;
@@ -51,4 +51,3 @@ int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
 	}
 	return (printed_chars);
 }
-
